@@ -1,21 +1,25 @@
 from num2words import num2words
 
-food01 = float(input("Food Price: "))
-food02 = float(input("Food Price: "))
-food03 = float(input("Food Price: "))
+taom1 = float(input("Mahsulot narxlarini kiriting: "))
+taom2 = float(input("Mahsulot narxlarini kiriting: "))
+taom3 = float(input("Mahsulot narxlarini kiriting: "))
 
-price = round(food01 + food02 + food03, 1)
+total_price = round(taom1 + taom2 + taom3, 3)
+
 
 words_en = num2words(
-    price, 
+    total_price, 
     to='currency', 
     currency='USD'
 )
 words_ru = num2words(
-    price, 
+    total_price, 
     lang='ru', 
     to='currency', 
     currency='USD'
 )
 
-print(price, words_en, words_ru)
+
+print(f"Umumiy narx: ${total_price, words_en, words_ru}\n"
+      f"Yaxlitlangan narx: ${total_price, words_en, words_ru}"
+      )
